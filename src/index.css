@@ -81,3 +81,57 @@ input, select, textarea { font-size: 16px; }
   .card { border-radius: 1.15rem; }
   .chip { padding-left: .8rem; padding-right: .8rem; }
 }
+
+/* Portfolio-ready Butchi visual polish: warm bakery neutrals, softer surfaces,
+   and the same rounded orange-accented interface across Owner and Rider views. */
+:root {
+  --ink: #211b18;
+  --brand: #bd4b00;
+  --brand-dark: #963b00;
+  --go: #07845f;
+  --surface: #fffefa;
+  --surface-muted: #f6f0e7;
+  --line: #e9e1d7;
+}
+
+body {
+  background: #faf6ef;
+  color: var(--ink);
+  letter-spacing: -0.012em;
+}
+
+button, a, input, select, textarea { transition-property: color, background-color, border-color, box-shadow, transform; transition-duration: 160ms; }
+
+.card {
+  border-color: #e9e4dd;
+  border-radius: 1.45rem;
+  background: #fff;
+  box-shadow: 0 1px 2px rgb(45 32 20 / 7%), 0 2px 7px rgb(45 32 20 / 3%);
+}
+
+.card:has(button:hover) { border-color: #e5d4c1; }
+
+.field {
+  border-color: #ded8d0;
+  border-radius: 1.05rem;
+  background: #fff;
+  box-shadow: 0 1px 1px rgb(45 32 20 / 3%);
+}
+
+.chip { font-weight: 600; }
+.chip-on { background: #bd4b00; border-color: #bd4b00; box-shadow: 0 2px 5px rgb(189 75 0 / 14%); }
+
+.btn-primary { background: #bd4b00; }
+.btn-primary:hover { background: #a54100; }
+
+header { box-shadow: 0 1px 5px rgb(45 32 20 / 4%); }
+
+@media (min-width: 768px) {
+  #root > div > main { padding-top: 1.5rem; }
+  .card { border-radius: 1.55rem; }
+}
+
+@media (max-width: 639px) {
+  body { background: #faf6ef; }
+  .card { border-radius: 1.2rem; }
+}

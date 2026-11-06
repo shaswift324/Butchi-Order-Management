@@ -48,3 +48,11 @@ On macOS, you can usually find the laptop's Wi-Fi IP with:
 ```bash
 ipconfig getifaddr en0
 ```
+
+## UI refresh
+
+The interface uses a warm cream-and-bakery-orange visual theme with rounded cards, softer borders and shadows, and consistent Owner/Rider styling. Existing order, menu, rider, map, settings, and offline/shared-server workflows are retained.
+
+## Environment setup
+
+Copy `.env.example` to `.env` and fill in your own local values if needed. Do not share your `.env` file or commit API keys/secrets.

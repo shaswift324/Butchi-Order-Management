@@ -30,11 +30,11 @@ export const Header: React.FC = () => {
     <header className="sticky top-0 z-30 border-b border-stone-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2.5">
         <div className="flex items-center gap-2">
-          <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-amber-100 text-2xl" aria-hidden>🥟</span>
-          <span className="hidden font-['Playfair_Display',serif] text-xl font-bold text-stone-900 min-[400px]:block">Butchi</span>
+          <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#fff0c7] text-2xl shadow-sm ring-1 ring-amber-100" aria-hidden>🥟</span>
+          <span className="hidden font-['Playfair_Display',serif] text-[1.35rem] font-bold tracking-tight text-stone-900 min-[400px]:block">Butchi</span>
         </div>
 
-        <div className="flex flex-1 gap-1 rounded-2xl bg-stone-100 p-1" role="group" aria-label="Switch view">
+        <div className="flex flex-1 gap-1 rounded-2xl bg-[#f3f1ee] p-1.5 ring-1 ring-stone-100" role="group" aria-label="Switch view">
           {roleBtn('owner', 'Owner', <Store className="h-4 w-4" />, activeCount, 'bg-amber-700')}
           {roleBtn('rider', 'Rider', <Bike className="h-4 w-4" />, riderCount, 'bg-orange-600')}
         </div>
