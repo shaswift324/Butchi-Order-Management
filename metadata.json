@@ -1,0 +1,10 @@
+{
+  "name": "Butchi - Order & Delivery Management",
+  "description": "Order management, sales monitoring, and smart route-optimized delivery system for a Filipino butchi, kakanin, and snack business.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

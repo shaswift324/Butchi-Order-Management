@@ -1,0 +1,121 @@
+{
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "Special Ube Butchi (Box of 12)",
+      "category": "Butchi",
+      "description": "Crispy golden sesame crust with fragrant homemade Halayang Ube purple yam filling.",
+      "price": 180,
+      "imageUrl": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
+      "stockQuantity": 45,
+      "isAvailable": true,
+      "unit": "Box of 12",
+      "soldCount": 312
+    },
+    {
+      "id": "prod-2",
+      "name": "Classic Red Bean Butchi (Box of 12)",
+      "category": "Butchi",
+      "description": "Traditional sweet red mung bean filling wrapped in chewy glutinous rice dough.",
+      "price": 160,
+      "imageUrl": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80",
+      "stockQuantity": 38,
+      "isAvailable": true,
+      "unit": "Box of 12",
+      "soldCount": 245
+    },
+    {
+      "id": "prod-3",
+      "name": "Creamy Cheese Melts Butchi (Box of 12)",
+      "category": "Butchi",
+      "description": "Bestseller! Savory melted cheese encased in sweet crispy sesame dough.",
+      "price": 200,
+      "imageUrl": "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=600&q=80",
+      "stockQuantity": 28,
+      "isAvailable": true,
+      "unit": "Box of 12",
+      "soldCount": 420
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord-101",
+      "orderNumber": "BTC-2026-1041",
+      "createdAt": "2026-11-01T20:00:00.000Z",
+      "customerName": "Ma. Cristina Roxas",
+      "customerPhone": "0917-555-4921",
+      "deliveryAddress": "Block 8 Lot 12, Grand Royale Subd., Brgy. Lugam, Malolos City, Bulacan",
+      "landmark": "Near Phase 2 Clubhouse",
+      "location": { "lat": 14.859, "lng": 120.8245 },
+      "items": [
+        {
+          "productId": "prod-1",
+          "name": "Special Ube Butchi (Box of 12)",
+          "price": 180,
+          "quantity": 2,
+          "total": 360,
+          "unit": "Box of 12"
+        }
+      ],
+      "subtotal": 360,
+      "deliveryFee": 45,
+      "totalAmount": 405,
+      "paymentMethod": "Cash on Delivery",
+      "paymentStatus": "unpaid",
+      "cashAmountExpected": 1000,
+      "status": "out_for_delivery",
+      "assignedRiderId": "rider-1",
+      "assignedRiderName": "Kuya Jun Santos",
+      "assignedAt": "2026-11-01T20:15:00.000Z",
+      "outForDeliveryAt": "2026-11-01T20:30:00.000Z",
+      "deliveryNotes": "Please ring doorbell twice."
+    }
+  ],
+  "riders": [
+    {
+      "id": "rider-1",
+      "name": "Kuya Jun Santos",
+      "phone": "0917-882-9014",
+      "vehicle": "Honda Click 150i (Motorcycle)",
+      "plateNumber": "BUL-8849-ND",
+      "status": "on_delivery",
+      "currentLocation": {
+        "lat": 14.853,
+        "lng": 120.8165,
+        "lastUpdated": "2026-11-01T20:35:00.000Z",
+        "isLiveGps": false
+      },
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+      "completedDeliveriesToday": 4,
+      "totalCodCollectedToday": 1820
+    }
+  ],
+  "storeProfile": {
+    "name": "Butchi House - Bulacan",
+    "tagline": "Freshly Fried Artisanal Butchi • Malolos & Bulacan Delivery",
+    "phone": "0917-889-BUTCHI (0930-073-6523)",
+    "address": "MacArthur Highway, Brgy. Duhat, Bocaue City, Bulacan ",
+    "location": { "lat": 14.8528, "lng": 120.816 },
+    "operatingHours": "7:00 AM - 8:30 PM (Daily)",
+    "gcashNumber": "0930-073-6523",
+    "gcashName": "Ate Maria Delicacies Bulacan",
+    "defaultDeliveryFee": 50,
+    "townDeliveryFees": {
+      "Malolos City": 40,
+      "Guiguinto": 50,
+      "Plaridel": 55
+    }
+  },
+  "notifications": [
+    {
+      "id": "notif-1",
+      "timestamp": "2026-11-01T20:20:00.000Z",
+      "type": "new_order",
+      "title": "New Order Received",
+      "message": "Order #BTC-2026-1041 for Ma. Cristina Roxas.",
+      "orderNumber": "BTC-2026-1041",
+      "orderId": "ord-101",
+      "isRead": false
+    }
+  ]
+}

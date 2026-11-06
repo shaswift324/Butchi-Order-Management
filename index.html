@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#b45309" />
+    <title>Butchi - Order & Delivery Management</title>
+    <meta name="description" content="Order management, sales monitoring, and smart route-optimized delivery system for a Filipino butchi, kakanin, and snack business." />
+    <meta property="og:title" content=" Butchi - Order & Delivery Management" />
+    <meta property="og:description" content="Order management, sales monitoring, and smart route-optimized delivery system for a Filipino butchi, kakanin, and snack business." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      window.addEventListener('unhandledrejection', function(e) {
+        if (e.reason && (e.reason.message?.includes('WebSocket') || String(e.reason).includes('WebSocket'))) {
+          e.preventDefault();
+        }
+      });
+      window.addEventListener('error', function(e) {
+        if (e.message?.includes('WebSocket') || e.filename?.includes('@vite/client')) {
+          e.preventDefault();
+        }
+      });
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

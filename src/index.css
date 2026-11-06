@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --ink: #1c1917;
+  --brand: #b45309;
+  --brand-dark: #92400e;
+  --go: #047857;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  background: #fbf7f0;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+}
+
+#root { min-height: 100dvh; }
+* { box-sizing: border-box; }
+/* fieldsets default to min-content width, which let scrolling chip rows stretch whole forms */
+fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+
+button, input, select, textarea { font: inherit; -webkit-tap-highlight-color: transparent; }
+button, [role='button'], select { cursor: pointer; touch-action: manipulation; }
+
+/* 16px inputs stop iOS from zooming the page when a field is focused */
+input, select, textarea { font-size: 16px; }
+
+:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+
+/* One-size-fits-thumbs controls: 48px minimum height (Tailwind v4 @utility so @apply and variants work) */
+@utility btn {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl px-4 text-[15px] font-bold
+         transition active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-50;
+}
+@utility btn-primary { @apply btn bg-amber-700 text-white shadow-sm hover:bg-amber-800; }
+@utility btn-go { @apply btn bg-emerald-700 text-white shadow-sm hover:bg-emerald-800; }
+@utility btn-soft { @apply btn border border-stone-300 bg-white text-stone-800 hover:bg-stone-50; }
+@utility btn-danger { @apply btn border border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100; }
+@utility btn-big { @apply min-h-14 text-base; }
+
+@utility field {
+  @apply min-h-12 w-full rounded-2xl border border-stone-300 bg-white px-3.5 text-stone-900
+         placeholder:text-stone-400 focus:border-amber-600 focus:outline-none focus:ring-4 focus:ring-amber-200/60;
+}
+@utility label { @apply mb-1.5 block text-sm font-bold text-stone-700; }
+@utility card { @apply rounded-3xl border border-stone-200 bg-white shadow-sm; }
+@utility chip {
+  @apply inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-full border border-stone-300 bg-white px-4
+         text-sm font-bold text-stone-700 transition active:scale-95;
+}
+@utility chip-on { @apply border-amber-700 bg-amber-700 text-white; }
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Sheet animation */
+@keyframes sheet-up { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+.anim-sheet { animation: sheet-up .22s ease-out; }
+.anim-fade { animation: fade-in .18s ease-out; }
+@media (prefers-reduced-motion: reduce) { .anim-sheet, .anim-fade { animation: none; } }
+
+/* Leaflet */
+.leaflet-container { font-family: inherit; }
+.leaflet-control-zoom a { width: 40px !important; height: 40px !important; line-height: 40px !important; font-size: 20px !important; }
+.custom-order-icon, .store-hub-icon, .rider-marker-icon { background: transparent; border: 0; }
+
+/* Responsive defaults for wide owner screens and compact rider phones */
+@media (min-width: 768px) {
+  body { font-size: 15px; }
+}
+@media (max-width: 420px) {
+  .card { border-radius: 1.15rem; }
+  .chip { padding-left: .8rem; padding-right: .8rem; }
+}
